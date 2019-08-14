@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import styled from "styled-components";
+import ReactResizeDetector from "react-resize-detector";
+import { Scrollbar } from "./components/Scrollbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Header } from "./components/Header";
+import { Main } from "./components/Main";
+
+import "./App.css";
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+`;
+
+function getWidthClass(width) {
+  if (width < 480) {
+    return 0;
+  } else if (width < 768) {
+    return 1;
+  } else if (width < 1024) {
+    return 2;
+  } else if (width >= 1024) {
+    return 3;
+  }
 }
+
+const App = () => (
+  <AppContainer>
+    <Router>
+      <Scrollbar>
+        <ReactResizeDetector querySelector="#root" handleWidth>
+          {({ width }) => (
+            <React.Fragment>
+              <Header width={getWidthClass(width)} />
+              <Main width={getWidthClass(width)} />
+            </React.Fragment>
+          )}
+        </ReactResizeDetector>
+      </Scrollbar>
+    </Router>
+  </AppContainer>
+);
 
 export default App;
