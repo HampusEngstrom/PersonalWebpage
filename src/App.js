@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import styled from "styled-components";
-import ReactResizeDetector from "react-resize-detector";
 import { Scrollbar } from "./components/Scrollbar";
+import { SettingsProvider } from "./contexts/SettingsContext";
+import { ContentProvider } from "./contexts/ContentContext";
 
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
@@ -16,30 +17,16 @@ const AppContainer = styled.div`
   min-width: 320px;
 `;
 
-function getWidthClass(width) {
-  if (width < 480) {
-    return 0;
-  } else if (width < 768) {
-    return 1;
-  } else if (width < 1024) {
-    return 2;
-  } else if (width >= 1024) {
-    return 3;
-  }
-}
-
 const App = () => (
   <AppContainer>
     <Router>
       <Scrollbar>
-        <ReactResizeDetector querySelector="#root" handleWidth>
-          {({ width }) => (
-            <React.Fragment>
-              <Header width={getWidthClass(width)} />
-              <Main width={getWidthClass(width)} />
-            </React.Fragment>
-          )}
-        </ReactResizeDetector>
+        <SettingsProvider>
+          <ContentProvider>
+            <Header />
+            <Main />
+          </ContentProvider>
+        </SettingsProvider>
       </Scrollbar>
     </Router>
   </AppContainer>

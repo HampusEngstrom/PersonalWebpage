@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Timeline } from "../../components/Timeline";
-import ReactResizeDetector from "react-resize-detector";
+import SettingsConsumer from "./../../contexts/SettingsContext";
 
 const formatTime = time =>
   isNaN(time) ? time : `${time.substr(0, 4)}/${time.substr(4, 2)}`;
@@ -37,36 +37,34 @@ const formatPeriod = type => obj => ({
   description: obj.description
 });
 
-const Container = styled.div`
+const formatData = (data, type) =>
+  [...data]
+    .reverse()
+    .reduce(
+      (acc, obj) => [
+        ...acc,
+        obj,
+        ...[...obj.projects].reverse().map(p => ({ ...p, project: true }))
+      ],
+      []
+    )
+    .map(formatPeriod(type));
+
+const TimelineContainer = styled.div`
   display: flex;
   max-width: 1000px;
   width: 90%;
   justify-content: center;
 `;
 
-const Education = props => (
-  <Container>
-    <ReactResizeDetector querySelector="#root" handleWidth>
-      {({ width }) => (
-        <Timeline
-          isWide={width > 767}
-          data={[...props.data]
-            .reverse()
-            .reduce(
-              (acc, obj) => [
-                ...acc,
-                obj,
-                ...[...obj.projects]
-                  .reverse()
-                  .map(p => ({ ...p, project: true }))
-              ],
-              []
-            )
-            .map(formatPeriod(props.type))}
-        />
-      )}
-    </ReactResizeDetector>
-  </Container>
+const Education = ({ data, type }) => (
+  <SettingsConsumer>
+    {({ widthClass }) => (
+      <TimelineContainer>
+        <Timeline isWide={widthClass > 1} data={formatData(data, type)} />
+      </TimelineContainer>
+    )}
+  </SettingsConsumer>
 );
 
 export default Education;

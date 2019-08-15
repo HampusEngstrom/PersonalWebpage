@@ -1,17 +1,23 @@
 import React from "react";
-import { ContactDetail } from "./../../components/ContactDetail";
+import { LabeledIcon } from "./../../components/IconsComponent";
 import styled from "styled-components";
+
 import {
   faAt,
   faMapMarkerAlt,
   faPhoneAlt
 } from "@fortawesome/free-solid-svg-icons";
-import "./style.css";
 
 const ContactDetails = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1vh 1vh 1vh 1vh;
+
+  .labeled-icon {
+    display: flex;
+    padding: 5px 0px;
+  }
+
   @media (min-width: 768px) {
     padding: 5px;
     width: 100%;
@@ -20,8 +26,8 @@ const ContactDetails = styled.div`
 
 export default ({ email, phoneNumber, address }) => (
   <ContactDetails>
-    <ContactDetail label={email} icon={faAt} />
-    <ContactDetail label={phoneNumber} icon={faPhoneAlt} />
-    <ContactDetail label={address} icon={faMapMarkerAlt} />
+    <LabeledIcon icon={faAt} label={email} />
+    <LabeledIcon icon={faPhoneAlt} label={phoneNumber} />
+    <LabeledIcon icon={faMapMarkerAlt} label={address} />
   </ContactDetails>
 );

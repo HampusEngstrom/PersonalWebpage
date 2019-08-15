@@ -24,7 +24,7 @@ export default {
       address: "Zenithgatan 1a 212 14, Malmö"
     }
   },
-  skills: [
+  knowledge: [
     {
       title: "Språk",
       description: "",
@@ -223,7 +223,7 @@ export default {
     }
   ],
 
-  Experience: {
+  experience: {
     title: "Erfarenheter",
     work: [
       {

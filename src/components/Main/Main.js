@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import ExperiencePage from "./../../pages/ExperiencePage";
 import KnowledgeBankPage from "./../../pages/KnowledgeBankPage";
-import HomePage from "./../../pages/HomePage";
+import HomePage from "./../../pages/HomePage/";
 import AboutMePage from "./../../pages/AboutMePage";
 import FunFactsPage from "./../../pages/FunFactsPage";
 

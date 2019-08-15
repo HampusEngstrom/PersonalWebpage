@@ -7,7 +7,6 @@ const Scrollbar = props => (
     autoHideTimeout={1000}
     autoHideDuration={200}
     autoHeight
-    autoHeightMin={0}
     autoHeightMin={"100vh"}
     thumbMinSize={30}
     universal={true}

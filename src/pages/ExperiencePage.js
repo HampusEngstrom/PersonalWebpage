@@ -1,7 +1,7 @@
 import React from "react";
 import Experience from "./../containers/Experience";
 import { PageContainer, Header1, Text } from "./../components/Elements";
-import data from "./../data.js";
+import ContentConsumer from "./../contexts/ContentContext";
 import styled from "styled-components";
 
 const Header = styled(Header1)`
@@ -11,15 +11,24 @@ const Header = styled(Header1)`
   }
 `;
 
+const ContentContainer = ({ title, description, work, education }) => (
+  <React.Fragment>
+    <Header>{title}</Header>
+    <Text>{description}</Text>
+    <Experience data={work} type={"work"} />
+    <Experience data={education} type={"education"} />
+  </React.Fragment>
+);
+
 const HomePage = () => {
-  const { title, description, work, education } = data.Experience;
   return (
-    <PageContainer>
-      <Header>{title}</Header>
-      <Text>{description}</Text>
-      <Experience data={work} type={"work"} />
-      <Experience data={education} type={"education"} />
-    </PageContainer>
+    <ContentConsumer>
+      {({ experience }) => (
+        <PageContainer>
+          <ContentContainer {...experience} />
+        </PageContainer>
+      )}
+    </ContentConsumer>
   );
 };
 

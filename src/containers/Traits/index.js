@@ -1,1 +1,0 @@
-import Traits from "./Traits";

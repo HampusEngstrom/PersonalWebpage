@@ -1,8 +1,9 @@
 import React from "react";
 import RatedKnowledgeList from "./../containers/RatedKnowledgeList/";
 import Find from "./../containers/Find/";
-import content from "../data.js";
 import { FlexColumns } from "./../components/FlexComponents";
+import ContentConsumer from "./../contexts/ContentContext";
+import SettingsConsumer from "./../contexts/SettingsContext";
 
 import { PageContainer } from "./../components/Elements";
 import { RatedItem } from "./../components/RatedItem";
@@ -12,12 +13,14 @@ const shouldAppear = (acc, category) => {
   return children.length > 0 ? [...acc, { ...category, items: children }] : acc;
 };
 
-const KnowledgeBank = ({ width }) => {
-  const data = content.skills.reduce(shouldAppear, []);
-  const array = data.reduce((acc, category) => [...acc, ...category.items], []);
+const stripData = data => data.reduce(shouldAppear, []);
 
-  return (
-    <PageContainer>
+const flattenData = data =>
+  data.reduce((acc, category) => [...acc, ...category.items], []);
+
+const ContentContainer = ({ data, array }) => (
+  <SettingsConsumer>
+    {({ widthClass }) => (
       <FlexColumns style={{ width: "100%" }}>
         <Find
           data={array}
@@ -29,10 +32,23 @@ const KnowledgeBank = ({ width }) => {
             </React.Fragment>
           )}
         />
-        <RatedKnowledgeList width={width} data={data} />
+        <RatedKnowledgeList widthClass={widthClass} data={data} />
       </FlexColumns>
-    </PageContainer>
-  );
-};
+    )}
+  </SettingsConsumer>
+);
+
+const KnowledgeBank = () => (
+  <ContentConsumer>
+    {({ knowledge }) => (
+      <PageContainer>
+        <ContentContainer
+          data={stripData(knowledge)}
+          array={flattenData(stripData(knowledge))}
+        />
+      </PageContainer>
+    )}
+  </ContentConsumer>
+);
 
 export default KnowledgeBank;

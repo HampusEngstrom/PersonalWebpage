@@ -39,6 +39,7 @@ const SimpleContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  border-bottom: 1px solid #e6e6e6;
   .description {
     display: none;
   }

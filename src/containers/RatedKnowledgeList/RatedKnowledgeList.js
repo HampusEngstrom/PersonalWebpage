@@ -13,12 +13,13 @@ const ContentContainer = styled.div`
     max-width: 768px;
     margin: 20px;
   }
+
   @media (min-width: 1024px) {
     max-width: 1024px;
   }
 `;
 
-const RatedKnowledgeList = ({ data, width, inactive }) => (
+const RatedKnowledgeList = ({ data, width }) => (
   <ContentContainer>
     {data.map((obj, index) => (
       <RatedKnowledge

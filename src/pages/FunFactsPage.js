@@ -112,7 +112,7 @@ const HomePage = () => (
   <FlexRow>
     <FlexColumn>
       <div>
-        <img style={{ width: "100%" }} src={avatar} />
+        <img style={{ width: "100%" }} src={avatar} alt="" />
       </div>
     </FlexColumn>
     <FlexColumn>
