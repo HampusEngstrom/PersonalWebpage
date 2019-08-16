@@ -230,8 +230,8 @@ export default {
         start: "201509",
         end: "pågående",
         location: "Malmö",
-        workplace: "Cybercom",
-        role: "IT-konsult / Inhouse",
+        entity: "Cybercom",
+        entityTitle: "IT-konsult / Inhouse",
         description: `Lorem ipsum`,
         references: [],
         projects: [
@@ -290,8 +290,8 @@ export default {
         start: "200508",
         end: "200806",
         location: "Kalmar",
-        institution: "Lars Kagg",
-        education: "Tekniska programmet",
+        entity: "Lars Kagg",
+        entityTitle: "Tekniska programmet",
         projects: [],
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non ligula tellus. Ut placerat lorem eget neque tempor, quis fringilla leo imperdiet.`
       },
@@ -299,8 +299,8 @@ export default {
         start: "201009",
         end: "201511",
         location: "Lund",
-        institution: "Lunds tekniska högskola (LTH)",
-        education: "Civilingenjör i Elektroteknik",
+        entity: "Lunds tekniska högskola (LTH)",
+        entityTitle: "Civilingenjör i Elektroteknik",
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem metus, rutrum in blandit vitae, vehicula commodo sem. Aenean nec venenatis nunc. Integer a sodales diam, a placerat tortor.`,
         projects: [
           {

@@ -35,11 +35,7 @@ export default styled.div`
   z-index: 4;
 
   input {
-    font-size: 24px;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0);
     opacity: 0;
-    height: 50px;
     width: 0;
     transition: width 0.25s, opacity 0.5s;
     border: 0;

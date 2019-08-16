@@ -1,9 +1,11 @@
 import React from "react";
-import Period from "./Period";
-import SubPeriod from "./SubPeriod";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Timeline = styled.ul`
+import Period from "./Period";
+import SubPeriod from "./SubPeriod";
+
+const ListOfPeriods = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -12,34 +14,23 @@ const Timeline = styled.ul`
   width: 100%;
 `;
 
-const Container = props => (
-  <Timeline>
-    {props.data.map((obj, index) => {
-      return (
-        (obj.project && (
-          <SubPeriod
-            isWide={props.isWide}
-            key={index}
-            start={obj.start}
-            end={obj.end}
-            label={obj.label}
-            title={obj.title}
-            description={obj.description}
-          />
-        )) || (
-          <Period
-            isWide={props.isWide}
-            key={index}
-            start={obj.start}
-            end={obj.end}
-            label={obj.label}
-            title={obj.title}
-            description={obj.description}
-          />
+const Timeline = ({ data, isWide }) => (
+  <ListOfPeriods>
+    {data.map(
+      (obj, index) =>
+        obj.project ? (
+          <SubPeriod key={index} isWide={isWide} {...obj} />
+        ) : (
+          <Period key={index} isWide={isWide} {...obj} project={obj.project} />
         )
-      );
-    })}
-  </Timeline>
+      // )
+    )}
+  </ListOfPeriods>
 );
 
-export default Container;
+Timeline.propTypes = {
+  data: PropTypes.array,
+  isWide: PropTypes.bool
+};
+
+export default Timeline;

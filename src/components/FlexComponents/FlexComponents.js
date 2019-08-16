@@ -1,17 +1,19 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const Flex = styled.div`
+const sharedStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const FlexRows = styled(Flex)`
+const FlexRows = styled.div`
+  ${sharedStyle}
   flex-direction: row;
   width: 100%;
 `;
 
-const FlexColumns = styled(Flex)`
+const FlexColumns = styled.div`
+  ${sharedStyle}
   flex-direction: column;
 `;
 

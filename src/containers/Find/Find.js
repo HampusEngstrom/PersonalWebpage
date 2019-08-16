@@ -5,15 +5,7 @@ import SearchContainer from "./SearchContainer";
 import Backdrop from "./Backdrop";
 import MagnifyingGlass from "./MagnifyingGlass";
 import Close from "./Close";
-
-const Input = ({ value, onChangeHandler }) => (
-  <input
-    value={value}
-    onChange={e => {
-      onChangeHandler(e.target.value);
-    }}
-  />
-);
+import { Input } from "./../../components/Input";
 
 const ResultList = styled.ul`
   margin: 0;

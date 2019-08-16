@@ -15,8 +15,8 @@ const ContentContainer = ({ title, description, work, education }) => (
   <React.Fragment>
     <Header>{title}</Header>
     <Text>{description}</Text>
-    <Experience data={work} type={"work"} />
-    <Experience data={education} type={"education"} />
+    <Experience data={work} />
+    <Experience data={education} />
   </React.Fragment>
 );
 

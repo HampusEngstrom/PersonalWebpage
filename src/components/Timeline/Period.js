@@ -1,58 +1,65 @@
 import React from "react";
+import styled from "styled-components";
+
 import { Text, Header3, Header4 } from "./../Elements";
 import {
   TimeContainer,
   Line,
-  DescriptionContainer,
+  DescriptionContainer as DC,
   Period,
   Dot
 } from "./Components";
 
-const WidePeriod = props => (
-  <Period className="wide">
+const Time = styled(Header3)`
+  color: #739654;
+  justify-content: ${({ center }) => (center ? "flex-start" : "flex-end")}
+  text-align: ${({ center }) => (center ? "right" : "left")};
+`;
+
+const TimeLabel = styled(Header4)`
+  text-align: ${({ center }) => (center ? "right" : "left")};
+`;
+
+const Description = ({ title, description }) => (
+  <DC>
+    <Header3 style={{ color: "#739654" }}>{title}</Header3>
+    <Text style={{ textAlign: "left" }}>{description}</Text>
+  </DC>
+);
+
+const CenterAlignedPeriod = ({ start, end, label, title, description }) => (
+  <Period>
     <TimeContainer>
-      <Header3
-        style={{
-          justifyContent: "flex-end",
-          color: "#739654",
-          textAlign: "right"
-        }}
-      >
-        {props.start} - {props.end}
-      </Header3>
-      <Text style={{ textAlign: "right" }}>{props.label}</Text>
+      <Time center>
+        {start} - {end}
+      </Time>
+      <TimeLabel>{label}</TimeLabel>
     </TimeContainer>
     <Line />
     <Dot />
-    <DescriptionContainer>
-      <Header3 style={{ color: "#739654" }}>{props.title}</Header3>
-      <Text style={{ textAlign: "left" }}>{props.description}</Text>
-    </DescriptionContainer>
+    <Description title={title} description={description} />
   </Period>
 );
 
-const NarrowPeriod = props => (
-  <Period className="narrow">
+const LeftAlignedPeriod = ({ start, end, label, title, description }) => (
+  <Period>
     <Line />
     <Dot />
     <div style={{ display: "flex", flexDirection: "column" }}>
       <TimeContainer>
-        <Header3
-          style={{
-            color: "#739654"
-          }}
-        >
-          {props.start} - {props.end}
-        </Header3>
-        <Header4>{props.label}</Header4>
+        <Time>
+          {start} - {end}
+        </Time>
+        <TimeLabel>{label}</TimeLabel>
       </TimeContainer>
-      <DescriptionContainer>
-        <Header3 style={{ color: "#739654" }}>{props.title}</Header3>
-        <Text style={{ textAlign: "left" }}>{props.description}</Text>
-      </DescriptionContainer>
+      <Description title={title} description={description} />
     </div>
   </Period>
 );
 
 export default props =>
-  props.isWide ? <WidePeriod {...props} /> : <NarrowPeriod {...props} />;
+  props.isWide ? (
+    <CenterAlignedPeriod {...props} />
+  ) : (
+    <LeftAlignedPeriod {...props} />
+  );

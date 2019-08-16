@@ -8,9 +8,6 @@ const PageContainer = styled.div`
   @media (min-width: 768px) {
     width: 100%;
   }
-  @media (min-width: 1024px) {
-    // width: 80%;
-  }
 `;
 
 export { PageContainer };
