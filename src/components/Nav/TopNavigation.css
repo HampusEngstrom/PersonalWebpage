@@ -1,0 +1,22 @@
+nav.top-nav {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  width: 600px;
+  justify-content: space-around;
+}
+
+nav.top-nav a {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+nav.top-nav a.active {
+  text-decoration: underline;
+  color: #739654;
+}
+
+nav.top-nav a svg {
+  display: none;
+}

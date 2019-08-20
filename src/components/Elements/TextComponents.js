@@ -22,8 +22,8 @@ const Title = styled.h1`
     line-height: 45px;
   }
   @media (min-width: 480px) {
-    font-size: 4.3em;
-    line-height: 65px;
+    font-size: 3.75em;
+    line-height: 55px;
   }
   @media (min-width: 768px) {
     text-align: left;

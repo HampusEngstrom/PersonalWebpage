@@ -8,6 +8,7 @@ const Scrollbar = props => (
     autoHideDuration={200}
     autoHeight
     autoHeightMin={"100vh"}
+    autoHeightMax={"100vh"}
     thumbMinSize={30}
     universal={true}
     renderThumbVertical={({ style, ...props }) => (

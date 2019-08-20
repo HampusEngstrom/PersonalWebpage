@@ -11,8 +11,11 @@ import styled from "styled-components";
 const MainContainer = styled.div`
   display: flex;
   width: 100%;
-  justify-content: center;
-  padding: 10px 0;
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Main = ({ width }) => (

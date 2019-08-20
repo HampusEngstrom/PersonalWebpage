@@ -1,21 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { SocialMediaButtons } from "./../SocialMediaButtons";
+import { SocialMediaButtons } from "../SocialMediaButtons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faHome,
-  faBrain,
-  faCodeBranch as faBranch,
-  faUserCircle
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faGrinAlt as faGrin,
-  faChartBar as faChart
-} from "@fortawesome/free-regular-svg-icons";
-import { Header3, Header4 } from "./../Elements";
+import { faBars, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { Header3, Header4 } from "../Elements";
 
 import styled from "styled-components";
+
+import "./SideNavigation.css";
 
 const NavigationContainer = styled.div`
   display: flex;
@@ -48,43 +39,19 @@ const NavigationList = styled.div`
   }
 `;
 
-const MenuItems = styled.ul`
-  width: 100%;
-  padding: 20px 0;
-  margin: 0;
-  box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.1);
-  li.menu-link {
-    display: flex;
-    width: 100%;
-    height: 60px;
-    font-size: 1em;
-    align-items: center;
-    justify-content: center;
-    a {
-      width: 80%;
-      display: flex;
-      height: 100%;
-      align-items: center;
-      svg {
-        margin-right: 5%;
-      }
-    }
-  }
-`;
-
 const ToggleNavigation = styled.div`
   display: flex;
   color: white;
   height: 100%;
 `;
 
-const MenuBtn = styled.div`
+const ToggleNavigationBtn = styled.div`
   display: flex;
   align-items: center;
   padding: 0 20px;
 `;
 
-const MenuTitle = styled.div`
+const NavigationTitle = styled.div`
   height: 30%;
   width: 100%;
   display: flex;
@@ -128,7 +95,7 @@ const Background = styled.div`
   }
 `;
 
-const Menu = styled.div`
+const NavigationControl = styled.div`
   display: flex;
   z-index: 21;
   background-color: #1a1a1a;
@@ -137,24 +104,7 @@ const Menu = styled.div`
   align-items: center;
 `;
 
-const MenuItem = ({ fn, to, icon, size = "lg", children }) => (
-  <li className="menu-link">
-    <NavLink
-      to={to}
-      exact
-      className={"link"}
-      activeClassName="active"
-      onClick={fn}
-    >
-      <Icon>
-        <FontAwesomeIcon icon={icon} size={size} />
-      </Icon>
-      {children}
-    </NavLink>
-  </li>
-);
-
-export default class HiddenNavigation extends React.Component {
+export default class SideNavigation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -167,50 +117,33 @@ export default class HiddenNavigation extends React.Component {
   };
 
   render() {
-    const fn = this.toggleActive();
     return (
       <NavigationContainer className="navigation-container">
         <Background
           className={this.state.active && "active"}
           onClick={this.toggleActive()}
         />
-        <Menu>
+        <NavigationControl>
           <ToggleNavigation className="toggle-menu">
-            <MenuBtn onClick={this.toggleActive()}>
+            <ToggleNavigationBtn onClick={this.toggleActive()}>
               <FontAwesomeIcon icon={faBars} size="2x" />
-            </MenuBtn>
+            </ToggleNavigationBtn>
           </ToggleNavigation>
           <div style={{ color: "white", display: "flex" }}>
             Förnamn Efternamn
           </div>
-        </Menu>
+        </NavigationControl>
         <NavigationList className={this.state.active && "active"}>
-          <MenuTitle>
+          <NavigationTitle>
             <Icon>
               <FontAwesomeIcon icon={faUserCircle} size="6x" />
             </Icon>
             <Header3>Logo</Header3>
-          </MenuTitle>
+          </NavigationTitle>
           <NavigationHeader>
             <Header4>Navigation</Header4>
           </NavigationHeader>
-          <MenuItems>
-            <MenuItem icon={faHome} to="/" fn={fn}>
-              Home
-            </MenuItem>
-            <MenuItem icon={faGrin} to="/about-me" fn={fn}>
-              About me
-            </MenuItem>
-            <MenuItem icon={faBranch} to="/experiences" fn={fn}>
-              Experiences
-            </MenuItem>
-            <MenuItem icon={faBrain} to="/knowledge-bank" fn={fn}>
-              Knowledge
-            </MenuItem>
-            <MenuItem icon={faChart} to="/fun-facts" fn={fn}>
-              Fun facts
-            </MenuItem>
-          </MenuItems>
+          {this.props.children || this.props.render(this.toggleActive())}
           <SocialMediaButtons />
         </NavigationList>
       </NavigationContainer>

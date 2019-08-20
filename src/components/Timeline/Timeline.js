@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Period from "./Period";
-import SubPeriod from "./SubPeriod";
 
 const ListOfPeriods = styled.ul`
   display: flex;
@@ -16,15 +15,9 @@ const ListOfPeriods = styled.ul`
 
 const Timeline = ({ data, isWide }) => (
   <ListOfPeriods>
-    {data.map(
-      (obj, index) =>
-        obj.project ? (
-          <SubPeriod key={index} isWide={isWide} {...obj} />
-        ) : (
-          <Period key={index} isWide={isWide} {...obj} project={obj.project} />
-        )
-      // )
-    )}
+    {data.map((obj, index) => (
+      <Period key={index} isWide={isWide} {...obj} project={obj.project} />
+    ))}
   </ListOfPeriods>
 );
 

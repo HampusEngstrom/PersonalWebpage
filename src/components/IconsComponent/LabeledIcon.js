@@ -4,7 +4,7 @@ import { IconContainer, IconTextContainer } from ".";
 
 const LabeledIcon = ({ label, icon }) => (
   <div className="labeled-icon">
-    <IconContainer>
+    <IconContainer className="icon">
       <FontAwesomeIcon icon={icon} />
     </IconContainer>
     <IconTextContainer>{label}</IconTextContainer>

@@ -11,23 +11,38 @@ import {
 const ContactDetails = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1vh 1vh 1vh 1vh;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
 
   .labeled-icon {
     display: flex;
-    padding: 5px 0px;
+    padding: 3px 0px;
+    width: 300px;
+    justify-content: ${({ align }) => align || "flex-start"};
+    .icon {
+      display: ${({ visibleIcons }) => (visibleIcons ? "flex" : "none")};
+    }
   }
 
   @media (min-width: 768px) {
     padding: 5px;
     width: 100%;
+    justify-content: flex-start;
+    align-items: ${({ align }) => align || "flex-start"};
   }
 `;
 
-export default ({ email, phoneNumber, address }) => (
-  <ContactDetails>
-    <LabeledIcon icon={faAt} label={email} />
-    <LabeledIcon icon={faPhoneAlt} label={phoneNumber} />
-    <LabeledIcon icon={faMapMarkerAlt} label={address} />
+export default ({
+  email,
+  phoneNumber,
+  address,
+  align,
+  visibleIcons = true
+}) => (
+  <ContactDetails align={align} visibleIcons={visibleIcons}>
+    {phoneNumber && <LabeledIcon icon={faPhoneAlt} label={phoneNumber} />}
+    {address && <LabeledIcon icon={faMapMarkerAlt} label={address} />}
+    {email && <LabeledIcon icon={faAt} label={email} />}
   </ContactDetails>
 );

@@ -1,0 +1,27 @@
+nav.side-nav {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  height: auto;
+}
+
+.side-nav a {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  text-decoration: none;
+  color: #405c27;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 7vw;
+}
+
+.side-nav a.active {
+  text-decoration: underline;
+}
+
+.side-nav a svg {
+  margin-right: 5%;
+}
