@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import ExperiencePage from "./../../pages/ExperiencePage";
 import KnowledgeBankPage from "./../../pages/KnowledgeBankPage";
-import HomePage from "./../../pages/HomePage/";
+import HomePage from "./../../pages/HomePage";
 import AboutMePage from "./../../pages/AboutMePage";
-import FunFactsPage from "./../../pages/FunFactsPage";
+import PrintVersionPage from "./../../pages/PrintVersionPage";
 
 import styled from "styled-components";
 
@@ -40,8 +40,8 @@ const Main = ({ width }) => (
         render={props => <KnowledgeBankPage {...props} width={width} />}
       />
       <Route
-        path="/fun-facts"
-        render={props => <FunFactsPage {...props} width={width} />}
+        path="/print"
+        render={props => <PrintVersionPage {...props} width={width} />}
       />
       <Route component={HomePage} />
     </Switch>

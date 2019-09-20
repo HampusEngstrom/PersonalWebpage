@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import ContentConsumer from "../../contexts/ContentContext";
+import ContentConsumer from "../contexts/ContentContext";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
-import { LabeledIcon } from "../../components/IconsComponent";
-import { SocialMediaButtons } from "../../components/SocialMediaButtons";
-import { PageContainer, MainTitle, Header4 } from "../../components/Elements";
+import { LabeledIcon } from "../components/IconsComponent";
+import { SocialMediaButtons } from "../components/SocialMediaButtons";
+import { PageContainer, MainTitle, Header4 } from "./../components/Elements";
 
-import { FlexColumns } from "../../components/FlexComponents";
+import { FlexColumns } from "../components/FlexComponents";
 
-import ContactDetails from "../../features/ContactDetails";
+import ContactDetails from "../features/ContactDetails";
 
-import avatar from "./../../assets/img_avatar.jpg";
+import avatar from "./../assets/img_avatar.jpg";
 
 const WorkTitle = styled(Header4)`
   padding-bottom: 20px;
@@ -98,7 +98,7 @@ const ContentContainer = ({ name, workTitle, contact }) => (
   <Content>
     <ImageContainer>
       <Avatar>
-        <img src={avatar} />
+        <img src={avatar} alt="" />
       </Avatar>
     </ImageContainer>
     <Information>
@@ -113,7 +113,7 @@ const ContentContainer = ({ name, workTitle, contact }) => (
         phoneNumber={contact.phoneNumber}
         address={contact.address}
       />
-      <SocialMediaButtons />
+      <SocialMediaButtons links={contact.socialMedia} />
     </Information>
   </Content>
 );

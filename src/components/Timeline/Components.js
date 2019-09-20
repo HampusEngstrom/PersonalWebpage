@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Header3, Header4, Header5 } from "./../Elements";
+import { Text, Header3, Header4, Header5 } from "./../Elements";
 
 const colorGreen = "#739654";
 
@@ -17,7 +17,7 @@ const DescriptionContainer = styled.div`
   padding: ${({ center }) => (center ? "5px 0 30px 0" : "5px 0 30px 20px")};
 
   @media (min-width: 768px) {
-    max-width: 400px;
+    max-width: 600px;
     padding: 15px 10px;
   }
 `;
@@ -36,6 +36,26 @@ const TimeContainer = styled.div`
     width: 35%;
     padding: 15px 30px 15px 0;
   }
+`;
+
+const DescriptionText = styled(Text)`
+  // overflow: hidden;
+  // display: -webkit-box;
+  // line-clamp: 5;
+  // -webkit-line-clamp: 5;
+  // -webkit-box-orient: vertical;
+  // background: -webkit-linear-gradient(#333, #eee);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+
+  // &:hover {
+  //   -webkit-line-clamp: inherit;
+  //   line-clamp: inherit;
+
+  //   background: inherit;
+  //   -webkit-background-clip: inherit;
+  //   -webkit-text-fill-color: inherit;
+  // }
 `;
 
 const TagStyle = css`
@@ -111,12 +131,13 @@ const HoverPeriod = styled(Period)`
     ${Time}, ${DescriptionHeader} {
       color: black;
     }
+
     ${TimeContainer}, ${DescriptionContainer} {
       margin-left: -2px;
       margin-right: 2px;
     }
 
-    @media (min-width: 768px) {
+    $ @media (min-width: 768px) {
       ${TimeContainer} {
         margin-left: 5px;
         margin-right: -5px;
@@ -139,5 +160,6 @@ export {
   Period,
   HoverPeriod,
   Dot,
-  ProjectLine
+  ProjectLine,
+  DescriptionText
 };

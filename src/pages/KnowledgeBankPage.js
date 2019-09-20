@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+
 import RatedKnowledgeList from "./../containers/RatedKnowledgeList/";
 import Find from "./../containers/Find/";
 import { FlexColumns } from "./../components/FlexComponents";
@@ -18,7 +20,7 @@ const stripData = data => data.reduce(shouldAppear, []);
 const flattenData = data =>
   data.reduce((acc, category) => [...acc, ...category.items], []);
 
-const ContentContainer = ({ data, array }) => (
+const WhatIKnow = ({ data, array }) => (
   <SettingsConsumer>
     {({ widthClass }) => (
       <FlexColumns style={{ width: "100%" }}>
@@ -38,13 +40,37 @@ const ContentContainer = ({ data, array }) => (
   </SettingsConsumer>
 );
 
+const ContentContainer = styled.div`
+  width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    margin: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+`;
+
+const WhatIAimToKnow = ({ title, description }) => (
+  <ContentContainer>
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </ContentContainer>
+);
+
 const KnowledgeBank = () => (
   <ContentConsumer>
     {({ knowledge }) => (
       <PageContainer>
-        <ContentContainer
-          data={stripData(knowledge)}
-          array={flattenData(stripData(knowledge))}
+        <WhatIAimToKnow
+          title={knowledge.shallObtain.title}
+          description={knowledge.shallObtain.description}
+        />
+        <WhatIKnow
+          data={stripData(knowledge.obtained)}
+          array={flattenData(stripData(knowledge.obtained))}
         />
       </PageContainer>
     )}

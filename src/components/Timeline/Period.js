@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Text } from "./../Elements";
 import {
   Period,
   HoverPeriod,
@@ -11,7 +10,8 @@ import {
   DescriptionHeader,
   Line,
   Dot,
-  ProjectLine
+  ProjectLine,
+  DescriptionText
 } from "./Components";
 
 const PeriodContainer = ({
@@ -38,7 +38,7 @@ const PeriodContainer = ({
       <PeriodTag center={center} />
       <DescriptionContainer>
         <DescriptionHeader>{title}</DescriptionHeader>
-        <Text>{description}</Text>
+        <DescriptionText>{description}</DescriptionText>
       </DescriptionContainer>
     </TimelinePeriod>
   );

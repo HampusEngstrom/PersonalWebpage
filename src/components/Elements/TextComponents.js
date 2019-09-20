@@ -46,8 +46,19 @@ const Text = styled.p`
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  text-align: justify;
+  text-align: left;
   font-size: 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+
+  @media (min-width: 480px) {
+    text-align: justify;
+  }
 `;
 
-export { MainTitle, Title, Text };
+const BoldText = styled(Text)`
+  font-weight: bold;
+  font-size: ${({ fontSize }) => fontSize || "1em"};
+`;
+
+export { MainTitle, Title, Text, BoldText };

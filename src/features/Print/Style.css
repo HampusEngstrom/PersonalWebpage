@@ -1,0 +1,4 @@
+html.print header,
+html.print footer {
+  display: none;
+}
