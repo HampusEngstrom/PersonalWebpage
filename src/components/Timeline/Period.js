@@ -32,12 +32,12 @@ const PeriodContainer = ({
         <Time center={center}>
           {start} - {end}
         </Time>
-        <TimeLabel center={center}>{label}</TimeLabel>
       </TimeContainer>
       <Line center={center} />
       <PeriodTag center={center} />
       <DescriptionContainer>
         <DescriptionHeader>{title}</DescriptionHeader>
+        <TimeLabel center={center}>{label}</TimeLabel>
         <DescriptionText>{description}</DescriptionText>
       </DescriptionContainer>
     </TimelinePeriod>

@@ -106,6 +106,8 @@ const TimeLabel = styled(Header5)`
   text-align: ${({ center }) => (center ? "right" : "left")};
   padding-left: ${({ center }) => (center ? "0px" : "20px")};
   font-size: ${({ center }) => (center ? "inherit" : "1em")};
+  font-style: italic;
+  color: #808080;
 `;
 
 const DescriptionHeader = styled(Header3)`
@@ -113,7 +115,7 @@ const DescriptionHeader = styled(Header3)`
 `;
 
 const HoverPeriod = styled(Period)`
-  color: gray;
+  // color: gray;
   transition: 0.5s color;
   ${Time}, ${DescriptionHeader} {
     color: gray;

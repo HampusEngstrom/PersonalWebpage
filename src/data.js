@@ -265,8 +265,7 @@ export default {
             projectType: "Planeringsverktyg för hyllor",
             location: "Malmö",
             projectRole: "Utvecklare i team",
-            description: `Två applikationer, med delad kodbas, byggda i AngularJS med syfte att bygga hyllor.
-            Mitt andra projekt på cybercom där jag kom in efter prototypen. Första projektet där jag fick vara med från början.`
+            description: `Två applikationer, med delad kodbas, byggda i AngularJS med syfte att bygga hyllor.`
           },
           {
             start: "201803",
@@ -274,8 +273,7 @@ export default {
             projectType: "Prototyp (PoC) för sängar",
             location: "Malmö",
             projectRole: "Ensam utvecklare",
-            description: `PoC för ett planeringsverktyg för sängar.
-            Ensam utvecklare, jobbade tätt ihop med UX.`
+            description: `PoC för ett planeringsverktyg för sängar. Ensam utvecklare, jobbade tätt ihop med UX.`
           },
           {
             start: "201806",
@@ -289,8 +287,9 @@ export default {
             start: "201812",
             end: "201908",
             projectType: "Föräldraledig",
-            description: `Jag gick på en längre föräldraledighet strax före julen. Totalt spenderade jag 7 månader hemma med min 10 månader gamla dotter och min fru.`,
-            location: "Malmö"
+            location: "Malmö",
+            projectRole: null,
+            description: `Jag gick på en längre föräldraledighet strax före julen. Totalt spenderade jag 7 månader hemma med min 10 månader gamla dotter och min fru.`
           },
 
           {
@@ -298,9 +297,8 @@ export default {
             end: "201909",
             projectType: "Projektlös men långt ifrån sysslolös",
             location: "Malmö",
-            description: `I väntan på projekt fokuserade jag min tid på att läsa böcker om 
-            React, spa design and architecture, responsive design and data visualization.
-            Jag byggde även denna webbsidan i React, gick en onlinekurs i D3 (data visualisering) samt fortsätta med egna projekt inom D3 då jag förälskade mig i grafer och hade sedan tidigare ett väldigt stort intresse för statistik.`
+            projectRole: null,
+            description: `I väntan på projekt fokuserade jag min tid på att läsa böcker om React, SPA design and architecture, Responsive Design samt Data Visualization. Jag byggde även denna webbsidan i React, gick en onlinekurs i D3 (data visualisering) samt fortsätte med egna projekt inom D3.`
           },
           {
             start: "201909",
@@ -308,8 +306,7 @@ export default {
             projectType: "Planeringsverktyg för sängar",
             location: "Malmö",
             projectRole: "Utvecklare i team",
-            description: `En applikation byggd i React med syfte att bygga sängar.
-           Efter ca 6 veckor hoppar jag in i sängapplikationen igen`
+            description: `En applikation byggd i React med syfte att bygga sängar, samma applikation som före föräldraledigheten.`
           }
         ]
       }
@@ -322,15 +319,15 @@ export default {
         entity: "Lars Kagg",
         entityTitle: "Tekniska programmet",
         projects: [],
-        description: `Jag läste tre tekniska år på gymnasiet i Kalmar, inriktat mot programmering.`
+        description: null
       },
       {
         start: "201009",
         end: "201511",
         location: "Lund",
         entity: "Lunds tekniska högskola (LTH)",
-        entityTitle: "Civilingenjör i Elektroteknik",
-        description: `Jag läste till civilingenjör i Elektroteknik på LTH inriktat mot programvara.`,
+        entityTitle: "Civilingenjör i Elektroteknik inriktat mot Programvara",
+        description: null,
         projects: [
           {
             start: "201502",
