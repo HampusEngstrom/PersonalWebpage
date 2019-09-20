@@ -4,9 +4,9 @@ import styled from "styled-components";
 // import { Scrollbar } from "./components/Scrollbar";
 import { SettingsProvider } from "./contexts/SettingsContext";
 import { ContentProvider } from "./contexts/ContentContext";
-import Footer from "./containers/Footer";
 
-import Nav from "./components/Nav";
+import Footer from "./containers/Footer";
+import Header from "./containers/Header";
 import { Main } from "./components/Main";
 
 import "./App.css";
@@ -28,9 +28,7 @@ const App = () => (
       {/* <Scrollbar> */}
       <SettingsProvider>
         <ContentProvider>
-          <header role="banner">
-            <Nav />
-          </header>
+          <Header />
           <Main />
           <Footer />
         </ContentProvider>

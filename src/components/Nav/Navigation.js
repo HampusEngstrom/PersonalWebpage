@@ -50,10 +50,10 @@ export default ({ clickHandler, labels = true, icons = true, ...props }) => {
         <Icon visible={icons} icon={knowledgeIcon} />
         <Label visible={labels}>Vad kan jag?</Label>
       </NavLink>
-      <NavLink to="/print" target="_blank" onClick={clickHandler} {...classes}>
+      {/* <NavLink to="/print" target="_blank" onClick={clickHandler} {...classes}>
         <Icon visible={icons} icon={printIcon} />
         <Label visible={labels}>Utskrift</Label>
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 };
