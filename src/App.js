@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import styled from "styled-components";
-// import { Scrollbar } from "./components/Scrollbar";
 import { SettingsProvider } from "./contexts/SettingsContext";
 import { ContentProvider } from "./contexts/ContentContext";
 
@@ -25,7 +24,6 @@ const AppContainer = styled.div`
 const App = () => (
   <AppContainer>
     <Router>
-      {/* <Scrollbar> */}
       <SettingsProvider>
         <ContentProvider>
           <Header />
@@ -33,7 +31,6 @@ const App = () => (
           <Footer />
         </ContentProvider>
       </SettingsProvider>
-      {/* </Scrollbar> */}
     </Router>
   </AppContainer>
 );
