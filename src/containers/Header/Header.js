@@ -3,10 +3,14 @@ import styled from "styled-components";
 
 import Nav from "./../../components/Nav";
 
+const HeaderContainer = styled.header`
+  margin-top: 75px;
+`;
+
 const Header = () => (
-  <header role="banner">
+  <HeaderContainer role="banner">
     <Nav />
-  </header>
+  </HeaderContainer>
 );
 
 export default Header;

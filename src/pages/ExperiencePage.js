@@ -12,24 +12,22 @@ const Header = styled(Header1)`
 `;
 
 const ContentContainer = ({ title, description, work, education }) => (
-  <React.Fragment>
+  <>
     <Header>{title}</Header>
     <Text>{description}</Text>
     <Experience data={work} />
     <Experience data={education} />
-  </React.Fragment>
+  </>
 );
 
-const HomePage = () => {
-  return (
-    <ContentConsumer>
-      {({ experience }) => (
-        <PageContainer>
-          <ContentContainer {...experience} />
-        </PageContainer>
-      )}
-    </ContentConsumer>
-  );
-};
+const HomePage = () => (
+  <ContentConsumer>
+    {({ experience }) => (
+      <PageContainer>
+        <ContentContainer {...experience} />
+      </PageContainer>
+    )}
+  </ContentConsumer>
+);
 
 export default HomePage;

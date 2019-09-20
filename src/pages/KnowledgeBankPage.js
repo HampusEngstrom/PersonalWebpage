@@ -27,11 +27,11 @@ const WhatIKnow = ({ data, array }) => (
         <Find
           data={array}
           render={result => (
-            <React.Fragment>
+            <>
               {result.map((item, index) => (
                 <RatedItem key={index} {...item} theme="SIMPLE_ONE_ROW" />
               ))}
-            </React.Fragment>
+            </>
           )}
         />
         <RatedKnowledgeList widthClass={widthClass} data={data} />

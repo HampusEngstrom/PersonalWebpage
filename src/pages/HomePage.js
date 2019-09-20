@@ -10,7 +10,7 @@ import { FlexColumns } from "../components/FlexComponents";
 
 import ContactDetails from "../features/ContactDetails";
 
-import avatar from "./../assets/img_avatar.jpg";
+import avatar from "./../assets/profile.jpg";
 
 const WorkTitle = styled(Header4)`
   padding-bottom: 20px;
@@ -85,12 +85,24 @@ const Avatar = styled.div`
   width: 90%;
   height: auto;
   max-width: 480px;
+`;
+
+const ImageCrop = styled.div`
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: auto;
+  box-shadow: 0px 0 4px 3px rgba(0, 0, 0, 0.11);
 
   img {
     width: 100%;
-    height: auto;
     max-width: 100%;
-    vertical-align: middle;
+    bottom: 40px;
+    left: 0px;
+    position: relative;
   }
 `;
 
@@ -98,7 +110,9 @@ const ContentContainer = ({ name, workTitle, contact }) => (
   <Content>
     <ImageContainer>
       <Avatar>
-        <img src={avatar} alt="" />
+        <ImageCrop>
+          <img src={avatar} alt="" />
+        </ImageCrop>
       </Avatar>
     </ImageContainer>
     <Information>
@@ -118,16 +132,14 @@ const ContentContainer = ({ name, workTitle, contact }) => (
   </Content>
 );
 
-const HomePage = () => {
-  return (
-    <ContentConsumer>
-      {({ profile }) => (
-        <PageContainer>
-          <ContentContainer {...profile} />
-        </PageContainer>
-      )}
-    </ContentConsumer>
-  );
-};
+const HomePage = () => (
+  <ContentConsumer>
+    {({ profile }) => (
+      <PageContainer>
+        <ContentContainer {...profile} />
+      </PageContainer>
+    )}
+  </ContentConsumer>
+);
 
 export default HomePage;

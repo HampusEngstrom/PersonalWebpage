@@ -1,8 +1,6 @@
 import React from "react";
 import { FlexColumns } from "../FlexComponents";
 import SettingsConsumer from "../../contexts/SettingsContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 import Navigation from "./Navigation";
@@ -35,6 +33,12 @@ const Icon = styled.div`
   align-items: center;
   color: #405c27;
   margin-top: 20px;
+  font-size: 50px;
+  border: 2px solid #405c27;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-weight: bold;
 `;
 
 export default () => (
@@ -42,11 +46,7 @@ export default () => (
     <SettingsConsumer>
       {({ widthClass }) => (
         <React.Fragment>
-          {widthClass > 1 && (
-            <Icon>
-              <FontAwesomeIcon icon={faUserCircle} size="3x" />
-            </Icon>
-          )}
+          {widthClass > 1 && <Icon>H</Icon>}
           {getNav(widthClass)}
         </React.Fragment>
       )}
