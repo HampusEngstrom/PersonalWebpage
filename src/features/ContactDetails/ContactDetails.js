@@ -11,7 +11,6 @@ import {
 const ContactDetails = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 15px;
   justify-content: center;
   align-items: center;
 
@@ -26,7 +25,6 @@ const ContactDetails = styled.div`
   }
 
   @media (min-width: 768px) {
-    padding: 5px;
     width: 100%;
     justify-content: flex-start;
     align-items: ${({ align }) => align || "flex-start"};

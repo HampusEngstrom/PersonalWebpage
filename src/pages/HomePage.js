@@ -43,10 +43,8 @@ const Content = styled.div`
   align-self: center;
   justify-self: center;
   flex-grow: 1;
-  margin-top: 25px;
   @media (min-width: 768px) {
     flex-direction: row;
-    margin-top: 25px;
   }
 `;
 
@@ -71,6 +69,7 @@ const ImageContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: flex-end;
+  margin-top: 25px;
 
   @media (min-width: 768px) {
     margin-right: 10px;
@@ -82,14 +81,14 @@ const ImageContainer = styled.div`
 
 const Avatar = styled.div`
   display: block;
-  width: 90%;
+  width: 100%;
   height: auto;
   max-width: 480px;
 `;
 
 const ImageCrop = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -103,6 +102,16 @@ const ImageCrop = styled.div`
     bottom: 40px;
     left: 0px;
     position: relative;
+  }
+
+  @media (min-width: 480px) {
+    width: 325px;
+    height: 325px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 450px;
+    height: 450px;
   }
 `;
 
