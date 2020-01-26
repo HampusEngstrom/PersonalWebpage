@@ -20,10 +20,15 @@ const stripData = data => data.reduce(shouldAppear, []);
 const flattenData = data =>
   data.reduce((acc, category) => [...acc, ...category.items], []);
 
+const FindLabel = styled.div`
+  margin: 15px 0;
+`;
+
 const WhatIKnow = ({ data, array }) => (
   <SettingsConsumer>
     {({ widthClass }) => (
       <FlexColumns style={{ width: "100%" }}>
+        <FindLabel>Sök istället för att scrolla</FindLabel>
         <Find
           data={array}
           render={result => (
@@ -69,8 +74,8 @@ const KnowledgeBank = () => (
           description={knowledge.shallObtain.description}
         />
         <WhatIKnow
-          data={stripData(knowledge.obtained)}
-          array={flattenData(stripData(knowledge.obtained))}
+          data={stripData(knowledge.obtained.list)}
+          array={flattenData(stripData(knowledge.obtained.list))}
         />
       </PageContainer>
     )}

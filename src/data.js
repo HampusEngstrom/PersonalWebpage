@@ -19,224 +19,256 @@ export default {
   },
   knowledge: {
     shallObtain: {
-      title: `Vad vill jag lära mig?`,
-      description: `Mitt mål är just nu dedikera min tid till React och Redux professionellt sett, privat ämnar jag att dedikera till React och d3, jag vill även få in MongoDB på ett hörn.
+      title: `Vad kan jag och vad vill jag lära mig?`,
+      description: `Mitt mål är just nu dedikera min tid till React och Redux professionellt sett, privat ämnar jag att dedikera min tid till React och d3, jag vill även få in MongoDB på ett hörn.
       När jag känner mig mer bevkäm med dessa så ser jag mig själv kika på Vue eller Angular om inget annat vettigt och användbart har dykt upp. Jag vill även löpande se över Javascripts progress och känna mig up-to-date även där.`
     },
-    obtained: [
-      {
-        title: "Språk",
-        description: "",
-        items: [
-          { title: "Svenska", rating: 5, years: 5.1, description: "Modersmål" },
-          { title: "Engelska", rating: 5, years: 5.1, description: "Flytande" }
-        ]
-      },
-      {
-        title: "Programmeringsspråk",
-        description: "",
-        items: [
-          {
-            title: "Javascript",
-            rating: 4.5,
-            years: 5.1,
-            description: ""
-          },
-          {
-            title: "HTML",
-            rating: 5,
-            years: 5.1,
-            description: ""
-          },
-          {
-            title: "PHP",
-            rating: 2.5,
-            years: 5.1,
-            description: "Använts PHP ihop med MySQL"
-          }
-        ]
-      },
-      {
-        title: "Styling",
-        description: "",
-        items: [
-          {
-            title: "CSS",
-            rating: 5,
-            years: 5.1,
-            description: ""
-          },
-          {
-            title: "LESS",
-            rating: 5,
-            years: 4,
-            description: "Har använt LESS i flertal appar"
-          },
-          {
-            title: "SASS",
-            rating: 0,
-            years: 0,
-            description: ""
-          },
-          {
-            title: "Styled Components",
-            rating: 4,
-            years: 1,
-            description: "Har enbart använt styled components ihop med React"
-          },
-          {
-            title: "CSS Modules",
-            rating: 3.5,
-            years: 1,
-            description: "Har enbart använt CSS modules ihop med React"
-          }
-        ]
-      },
-      {
-        title: "Frameworks",
-        description: "",
-        items: [
-          {
-            title: "AngularJS (v1.6)",
-            rating: 4,
-            years: 3,
-            description:
-              "Har kört AngularJS v1.6 i två stycken projekt samt en PoC"
-          },
-          {
-            title: "Angular",
-            rating: 0,
-            years: 0,
-            description: "Ingen erfarenhet av Angular > 1.6"
-          },
-          {
-            title: "React",
-            rating: 3.5,
-            years: 1,
-            description:
-              "Har kört ett projekt i React via Cybercom, flera egna privata projekt samt läst någon bok"
-          },
-          {
-            title: "Vue",
-            rating: 2,
-            years: 1,
-            description:
-              "Har tittat på det lite i små egna projekt i syfte att lära mig"
-          },
-          {
-            title: "Redux",
-            rating: 2.5,
-            years: 1,
-            description:
-              "Redux har använts ihop med React, inte så mycket än så länge tyvärr. Försöker hitta en bra rytm med det"
-          },
-          {
-            title: "Node",
-            rating: 3.5,
-            years: 4,
-            description:
-              "Har byggt några node servrar, inget stort, mer flera små"
-          },
-          {
-            title: "D3",
-            rating: 3,
-            years: 1,
-            description:
-              "Lär mig genom egna projekt, onlinekurser samt böcker. Har ej fokuserat på geo"
-          }
-        ]
-      },
-      {
-        title: "Byggverktyg",
-        description: "",
-        items: [
-          {
-            title: "Grunt",
-            rating: 3.5,
-            years: 3,
-            description: "Har kört Grunt i ett par applikationer på Cybercom"
-          },
-          {
-            title: "Webpack",
-            rating: 3.5,
-            years: 3,
-            description:
-              "Har kört Webpack i ett par applikationer på Cybercom samt egna projekt"
-          }
-        ]
-      },
-      {
-        title: "Administration",
-        description: "",
-        items: [
-          {
-            title: "Git",
-            rating: 3.5,
-            years: 5.1,
-            description:
-              "Har använt Git i alla projekt än så länge samt gick en kurs på Högskolan"
-          },
-          {
-            title: "Jira",
-            rating: 3,
-            years: 4,
-            description: "Har använt Jira i de flesta projekten på Cybercom"
-          }
-        ]
-      },
-      {
-        title: "Databaser",
-        description: "",
-        items: [
-          {
-            title: "MySQL",
-            rating: 4,
-            years: 5,
-            description:
-              "Har arbetat med MySQL i egna projekt, i examensarbetet samt läst en kurs på högskolan"
-          },
-          {
-            title: "MongoDB",
-            rating: 0,
-            years: 0,
-            description:
-              "Ingen erfarenhet, planerar att kika på det när tid och användningsområde finns"
-          },
-          {
-            title: "CouchDB",
-            rating: 0,
-            years: 0,
-            description: ""
-          }
-        ]
-      },
-      {
-        title: "Design",
-        description: "",
-        items: [
-          {
-            title: "Photoshop",
-            rating: 4,
-            years: 5.1,
-            description:
-              "Har använt Photoshop sedan högstadiet för att redigera bilder, RAW-filer, producera material till diverse projekt"
-          }
-        ]
-      },
-      {
-        title: "Rest",
-        description: "",
-        items: [
-          {
-            title: "SVG",
-            rating: 3.5,
-            years: 1,
-            description:
-              "Har fått det mesta av kunskapen vid användning av D3 då det använder sig utav SVG"
-          }
-        ]
-      }
-    ]
+    obtained: {
+      title: `Så vad kan jag efter alla dessa år?`,
+      description: ``,
+      list: [
+        {
+          title: "Analytics",
+          description: "",
+          items: [
+            {
+              title: "Google Analytics",
+              rating: 3,
+              years: 1,
+              description: ""
+            },
+            {
+              title: "Google Data Studio",
+              rating: 3,
+              years: 1,
+              description: ""
+            }
+          ]
+        },
+        {
+          title: "Språk",
+          description: "",
+          items: [
+            {
+              title: "Svenska",
+              rating: 5,
+              years: 5.1,
+              description: "Modersmål"
+            },
+            {
+              title: "Engelska",
+              rating: 5,
+              years: 5.1,
+              description: "Flytande"
+            }
+          ]
+        },
+        {
+          title: "Programmeringsspråk",
+          description: "",
+          items: [
+            {
+              title: "Javascript",
+              rating: 4.5,
+              years: 5.1,
+              description: ""
+            },
+            {
+              title: "HTML",
+              rating: 5,
+              years: 5.1,
+              description: ""
+            },
+            {
+              title: "PHP",
+              rating: 2.5,
+              years: 5.1,
+              description: "Använts PHP ihop med MySQL"
+            }
+          ]
+        },
+        {
+          title: "Styling",
+          description: "",
+          items: [
+            {
+              title: "CSS",
+              rating: 5,
+              years: 5.1,
+              description: ""
+            },
+            {
+              title: "LESS",
+              rating: 5,
+              years: 4,
+              description: "Har använt LESS i flertal appar"
+            },
+            {
+              title: "SASS",
+              rating: 0,
+              years: 0,
+              description: ""
+            },
+            {
+              title: "Styled Components",
+              rating: 4,
+              years: 1,
+              description: "Har enbart använt styled components ihop med React"
+            },
+            {
+              title: "CSS Modules",
+              rating: 3.5,
+              years: 1,
+              description: "Har enbart använt CSS modules ihop med React"
+            }
+          ]
+        },
+        {
+          title: "Frameworks",
+          description: "",
+          items: [
+            {
+              title: "AngularJS (v1.6)",
+              rating: 4,
+              years: 3,
+              description:
+                "Har kört AngularJS v1.6 i två stycken projekt samt en PoC"
+            },
+            {
+              title: "Angular",
+              rating: 0,
+              years: 0,
+              description: "Ingen erfarenhet av Angular > 1.6"
+            },
+            {
+              title: "React",
+              rating: 3.5,
+              years: 1,
+              description:
+                "Har kört ett projekt i React via Cybercom, flera egna privata projekt samt läst någon bok"
+            },
+            {
+              title: "Vue",
+              rating: 2,
+              years: 1,
+              description:
+                "Har tittat på det lite i små egna projekt i syfte att lära mig"
+            },
+            {
+              title: "Redux",
+              rating: 2.5,
+              years: 1,
+              description:
+                "Redux har använts ihop med React, inte så mycket än så länge tyvärr. Försöker hitta en bra rytm med det"
+            },
+            {
+              title: "Node",
+              rating: 3.5,
+              years: 4,
+              description:
+                "Har byggt några node servrar, inget stort, mer flera små"
+            },
+            {
+              title: "D3",
+              rating: 3,
+              years: 1,
+              description:
+                "Lär mig genom egna projekt, onlinekurser samt böcker. Har ej fokuserat på geo"
+            }
+          ]
+        },
+        {
+          title: "Byggverktyg",
+          description: "",
+          items: [
+            {
+              title: "Grunt",
+              rating: 3.5,
+              years: 3,
+              description: "Har kört Grunt i ett par applikationer på Cybercom"
+            },
+            {
+              title: "Webpack",
+              rating: 3.5,
+              years: 3,
+              description:
+                "Har kört Webpack i ett par applikationer på Cybercom samt egna projekt"
+            }
+          ]
+        },
+        {
+          title: "Administration",
+          description: "",
+          items: [
+            {
+              title: "Git",
+              rating: 3.5,
+              years: 5.1,
+              description:
+                "Har använt Git i alla projekt än så länge samt gick en kurs på Högskolan"
+            },
+            {
+              title: "Jira",
+              rating: 3,
+              years: 4,
+              description: "Har använt Jira i de flesta projekten på Cybercom"
+            }
+          ]
+        },
+        {
+          title: "Databaser",
+          description: "",
+          items: [
+            {
+              title: "MySQL",
+              rating: 4,
+              years: 5,
+              description:
+                "Har arbetat med MySQL i egna projekt, i examensarbetet samt läst en kurs på högskolan"
+            },
+            {
+              title: "MongoDB",
+              rating: 0,
+              years: 0,
+              description:
+                "Ingen erfarenhet, planerar att kika på det när tid och användningsområde finns"
+            },
+            {
+              title: "CouchDB",
+              rating: 0,
+              years: 0,
+              description: ""
+            }
+          ]
+        },
+        {
+          title: "Design",
+          description: "",
+          items: [
+            {
+              title: "Photoshop",
+              rating: 4,
+              years: 5.1,
+              description:
+                "Har använt Photoshop många år för att redigera RAW-filer, producera content"
+            }
+          ]
+        },
+        {
+          title: "Rest",
+          description: "",
+          items: [
+            {
+              title: "SVG",
+              rating: 3.5,
+              years: 1,
+              description:
+                "Har fått det mesta av kunskapen vid användning av D3 då det använder sig utav SVG"
+            }
+          ]
+        }
+      ]
+    }
   },
 
   experience: {

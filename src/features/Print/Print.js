@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "./Style.css";
 
 class Print extends React.Component {

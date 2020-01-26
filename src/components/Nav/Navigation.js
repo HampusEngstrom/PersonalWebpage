@@ -7,8 +7,7 @@ import {
   faHome as homeIcon,
   faBrain as knowledgeIcon,
   faCodeBranch as experiencesIcon,
-  faUserTie as aboutMeIcon,
-  faPrint as printIcon
+  faUserTie as aboutMeIcon
 } from "@fortawesome/free-solid-svg-icons";
 
 const IconContainer = styled.div`
