@@ -2,26 +2,33 @@ export default {
   profile: {
     name: "Hampus Engström",
     workTitle: "Front-end utvecklare",
-    description: `__Jag är en civilingenjör inom elektroteknik vars intresse helt ligger på front-end. Med mina dryga 4 år inom applikationsutveckling sitter jag på bred kunskap inom området. Min ambition är att ligga på fronten av området och ta del av allt nytt som erbjuds inom ramverk och bibliotek. Sedan en relativt kort tid tillbaka har min tid ockuperats av React och D3 som grundas i en lång fascination och entusiasm för statistik och ett stort intresse för grafer. Denna del av mitt liv inleddes ihop med Hans Roslings bok Factfulness och dess tydliga men också väldigt inbjudande statistiska grafer kring världens hälsa.
-    Jag är nyfiken på det mesta och försöker fylla de kunskapsluckor jag anser mig ha. Jag gillar problem och tar mig gärna an uppgifter som inte ter sig uppenbart.
-    `,
+    description: `Jag har en Master of Science in Engineering, Electrical Engineering ifrån Lunds Tekniska Högskola. Jag valde att specialisera mig inom programvara.
+    Även fast jag läste en del programmering på gymnasiet så var det inte förrän på högskolan som jag verkligen föll för programmering.
+    Sista termin på LTH skrev jag och en student till vårt examensarbete "Evaluation and testing of technologies for indoor positioning" i samarbete med Cybercom, som senare anställde mig inom front-end.
+    Några månader senare träffade jag den vackra kvinnan som kom att bli min fru samt mor till min underbara dotter.
+    
+    Jag har sedan mina studier ca 4 års erfarenhet inom applikationsutveckling och bred kunskap inom området.
+    Under den senaste tiden har jag under min arbetstid fått stor fascination för Google Analytics och Google Data Studio.
+    Jag har också ett stort intresse för React och D3, intresset för D3 grundas i en lång fascination och entusiasm för statistik och ett stort intresse för grafer.
+    Denna del av mitt liv inleddes ihop med Hans Roslings bok Factfulness och dess tydliga men också väldigt inbjudande statistiska grafer kring världens hälsa.
+    Jag älskar att läsa, och gör detta mycket i perioder. Det som drar i mig är non-fiction, nästan enbart om psykologi och javascript.`,
     avatar: "./../assets/profile.jpg",
     contact: {
       email: "hampus.engstrom@hotmail.com",
-      phoneNumber: "0737203875",
-      address: "Zenithgatan 1a 212 14, Malmö",
+      phoneNumber: "0737 20 38 75",
+      address: "Brunnshögsgatan 16B \n224 81 Lund",
       socialMedia: {
         linkedin: "https://www.linkedin.com/in/hampus-engstr%C3%B6m-746b415a/",
-        facebook: "https://www.facebook.com/hampus.engstrom89",
-        github: "https://github.com/HampusEngstrom"
-      }
-    }
+        // facebook: "https://www.facebook.com/hampus.engstrom89"
+        // github: "https://github.com/HampusEngstrom"
+      },
+    },
   },
   knowledge: {
     shallObtain: {
       title: `Vad kan jag och vad vill jag lära mig?`,
-      description: `Mitt mål är just nu dedikera min tid till React och Redux professionellt sett, privat ämnar jag att dedikera min tid till React och d3, jag vill även få in MongoDB på ett hörn.
-      När jag känner mig mer bevkäm med dessa så ser jag mig själv kika på Vue eller Angular om inget annat vettigt och användbart har dykt upp. Jag vill även löpande se över Javascripts progress och känna mig up-to-date även där.`
+      description: `Professionellt sätter jag mig in i Google Analytics och Google Data Studio samtidigt som jag stärker mina kunskaper inom React och Redux.\n
+      Privat dedikerar jag min tid till D3, React och Redux. `,
     },
     obtained: {
       title: `Så vad kan jag efter alla dessa år?`,
@@ -33,17 +40,17 @@ export default {
           items: [
             {
               title: "Google Analytics",
-              rating: 3,
+              rating: 2.5,
               years: 1,
-              description: ""
+              description: "",
             },
             {
               title: "Google Data Studio",
-              rating: 3,
+              rating: 2.5,
               years: 1,
-              description: ""
-            }
-          ]
+              description: "",
+            },
+          ],
         },
         {
           title: "Språk",
@@ -53,15 +60,15 @@ export default {
               title: "Svenska",
               rating: 5,
               years: 5.1,
-              description: "Modersmål"
+              description: "Modersmål",
             },
             {
               title: "Engelska",
               rating: 5,
               years: 5.1,
-              description: "Flytande"
-            }
-          ]
+              description: "Flytande",
+            },
+          ],
         },
         {
           title: "Programmeringsspråk",
@@ -69,23 +76,23 @@ export default {
           items: [
             {
               title: "Javascript",
-              rating: 4.5,
+              rating: 5,
               years: 5.1,
-              description: ""
+              description: "",
             },
             {
               title: "HTML",
               rating: 5,
               years: 5.1,
-              description: ""
+              description: "",
             },
             {
               title: "PHP",
               rating: 2.5,
               years: 5.1,
-              description: "Använts PHP ihop med MySQL"
-            }
-          ]
+              description: "Använt PHP ihop med MySQL",
+            },
+          ],
         },
         {
           title: "Styling",
@@ -95,33 +102,33 @@ export default {
               title: "CSS",
               rating: 5,
               years: 5.1,
-              description: ""
+              description: "",
             },
             {
               title: "LESS",
               rating: 5,
               years: 4,
-              description: "Har använt LESS i flertal appar"
+              description: "Har använt LESS i flertal appar",
             },
             {
               title: "SASS",
               rating: 0,
               years: 0,
-              description: ""
+              description: "",
             },
             {
               title: "Styled Components",
               rating: 4,
-              years: 1,
-              description: "Har enbart använt styled components ihop med React"
+              years: 2,
+              description: "Har enbart använt styled components ihop med React",
             },
             {
               title: "CSS Modules",
               rating: 3.5,
               years: 1,
-              description: "Har enbart använt CSS modules ihop med React"
-            }
-          ]
+              description: "Har enbart använt CSS modules ihop med React",
+            },
+          ],
         },
         {
           title: "Frameworks",
@@ -132,50 +139,50 @@ export default {
               rating: 4,
               years: 3,
               description:
-                "Har kört AngularJS v1.6 i två stycken projekt samt en PoC"
+                "Har kört AngularJS v1.6 i två stycken projekt samt en PoC",
             },
             {
               title: "Angular",
               rating: 0,
               years: 0,
-              description: "Ingen erfarenhet av Angular > 1.6"
+              description: "Ingen erfarenhet av Angular > 1.6",
             },
             {
               title: "React",
-              rating: 3.5,
-              years: 1,
+              rating: 4,
+              years: 2,
               description:
-                "Har kört ett projekt i React via Cybercom, flera egna privata projekt samt läst någon bok"
+                "Har kört ett projekt i React via Cybercom, flera egna privata projekt samt läst någon bok",
             },
             {
               title: "Vue",
               rating: 2,
               years: 1,
               description:
-                "Har tittat på det lite i små egna projekt i syfte att lära mig"
+                "Har tittat på det lite i små egna projekt i syfte att lära mig",
             },
             {
               title: "Redux",
-              rating: 2.5,
-              years: 1,
+              rating: 3.5,
+              years: 2,
               description:
-                "Redux har använts ihop med React, inte så mycket än så länge tyvärr. Försöker hitta en bra rytm med det"
+                "Redux har använts ihop med React, inte så mycket än så länge tyvärr. Försöker hitta en bra rytm med det",
             },
             {
               title: "Node",
               rating: 3.5,
               years: 4,
               description:
-                "Har byggt några node servrar, inget stort, mer flera små"
+                "Har byggt några node servrar, inget stort, mer flera små",
             },
             {
               title: "D3",
               rating: 3,
               years: 1,
               description:
-                "Lär mig genom egna projekt, onlinekurser samt böcker. Har ej fokuserat på geo"
-            }
-          ]
+                "Lär mig genom egna projekt, onlinekurser samt böcker. Har ej fokuserat på geo",
+            },
+          ],
         },
         {
           title: "Byggverktyg",
@@ -185,16 +192,16 @@ export default {
               title: "Grunt",
               rating: 3.5,
               years: 3,
-              description: "Har kört Grunt i ett par applikationer på Cybercom"
+              description: "Har kört Grunt i ett par applikationer på Cybercom",
             },
             {
               title: "Webpack",
               rating: 3.5,
               years: 3,
               description:
-                "Har kört Webpack i ett par applikationer på Cybercom samt egna projekt"
-            }
-          ]
+                "Har kört Webpack i ett par applikationer på Cybercom samt egna projekt",
+            },
+          ],
         },
         {
           title: "Administration",
@@ -205,15 +212,21 @@ export default {
               rating: 3.5,
               years: 5.1,
               description:
-                "Har använt Git i alla projekt än så länge samt gick en kurs på Högskolan"
+                "Har använt Git i alla projekt än så länge samt gick en kurs på Högskolan",
             },
             {
               title: "Jira",
               rating: 3,
               years: 4,
-              description: "Har använt Jira i de flesta projekten på Cybercom"
-            }
-          ]
+              description: "Har använt Jira i de flesta projekten på Cybercom",
+            },
+            {
+              title: "Bitbucket",
+              rating: 3,
+              years: 2,
+              description: "Har använt Bitbucket i ett projekt på Cybercom",
+            },
+          ],
         },
         {
           title: "Databaser",
@@ -224,22 +237,22 @@ export default {
               rating: 4,
               years: 5,
               description:
-                "Har arbetat med MySQL i egna projekt, i examensarbetet samt läst en kurs på högskolan"
+                "Har arbetat med MySQL i egna projekt, i examensarbetet samt läst en kurs på högskolan",
             },
             {
               title: "MongoDB",
               rating: 0,
               years: 0,
               description:
-                "Ingen erfarenhet, planerar att kika på det när tid och användningsområde finns"
+                "Ingen erfarenhet, planerar att kika på det när tid och användningsområde finns",
             },
             {
               title: "CouchDB",
               rating: 0,
               years: 0,
-              description: ""
-            }
-          ]
+              description: "",
+            },
+          ],
         },
         {
           title: "Design",
@@ -250,9 +263,9 @@ export default {
               rating: 4,
               years: 5.1,
               description:
-                "Har använt Photoshop många år för att redigera RAW-filer, producera content"
-            }
-          ]
+                "Har använt Photoshop många år för att redigera RAW-filer, producera content",
+            },
+          ],
         },
         {
           title: "Rest",
@@ -263,12 +276,12 @@ export default {
               rating: 3.5,
               years: 1,
               description:
-                "Har fått det mesta av kunskapen vid användning av D3 då det använder sig utav SVG"
-            }
-          ]
-        }
-      ]
-    }
+                "Har fått det mesta av kunskapen vid användning av D3 då det använder sig utav SVG",
+            },
+          ],
+        },
+      ],
+    },
   },
 
   experience: {
@@ -289,7 +302,7 @@ export default {
             projectType: "Planeringsverktyg för lampor",
             location: "Malmö",
             projectRole: "Utvecklare i team",
-            description: `En applikation byggd i AngularJS med syfte att bygga lampor. Mitt första projekt på Cybercom.`
+            description: `En applikation byggd i AngularJS med syfte att bygga lampor. Mitt första projekt på Cybercom.`,
           },
           {
             start: "201601",
@@ -297,7 +310,7 @@ export default {
             projectType: "Planeringsverktyg för hyllor",
             location: "Malmö",
             projectRole: "Utvecklare i team",
-            description: `Två applikationer, med delad kodbas, byggda i AngularJS med syfte att bygga hyllor.`
+            description: `Två applikationer, med delad kodbas, byggda i AngularJS med syfte att bygga hyllor.`,
           },
           {
             start: "201803",
@@ -305,7 +318,7 @@ export default {
             projectType: "Prototyp (PoC) för sängar",
             location: "Malmö",
             projectRole: "Ensam utvecklare",
-            description: `PoC för ett planeringsverktyg för sängar. Ensam utvecklare, jobbade tätt ihop med UX.`
+            description: `PoC för ett planeringsverktyg för sängar. Ensam utvecklare, jobbade tätt ihop med UX.`,
           },
           {
             start: "201806",
@@ -313,7 +326,7 @@ export default {
             projectType: "Planeringsverktyg för sängar",
             location: "Malmö",
             projectRole: "Utvecklare i team / bildansvarig",
-            description: `En applikation byggd i React och Redux med syfte att bygga sängar.`
+            description: `En applikation byggd i React och Redux med syfte att bygga sängar.`,
           },
           {
             start: "201812",
@@ -321,7 +334,7 @@ export default {
             projectType: "Föräldraledig",
             location: "Malmö",
             projectRole: null,
-            description: `Jag gick på en längre föräldraledighet strax före julen. Totalt spenderade jag 7 månader hemma med min 10 månader gamla dotter och min fru.`
+            description: `Jag gick på en längre föräldraledighet strax före julen. Totalt spenderade jag 7 månader hemma med min 10 månader gamla dotter och min fru.`,
           },
 
           {
@@ -330,7 +343,7 @@ export default {
             projectType: "Projektlös men långt ifrån sysslolös",
             location: "Malmö",
             projectRole: null,
-            description: `I väntan på projekt fokuserade jag min tid på att läsa böcker om React, SPA design and architecture, Responsive Design samt Data Visualization. Jag byggde även denna webbsidan i React, gick en onlinekurs i D3 (data visualisering) samt fortsätte med egna projekt inom D3.`
+            description: `I väntan på projekt fokuserade jag min tid på att läsa böcker om React, SPA design and architecture, Responsive Design samt Data Visualization. Jag byggde även denna webbsidan i React, gick en onlinekurs i D3 (data visualisering) samt fortsatte med egna projekt inom D3.`,
           },
           {
             start: "201909",
@@ -338,10 +351,10 @@ export default {
             projectType: "Planeringsverktyg för sängar",
             location: "Malmö",
             projectRole: "Utvecklare i team",
-            description: `En applikation byggd i React med syfte att bygga sängar, samma applikation som före föräldraledigheten.`
-          }
-        ]
-      }
+            description: `En applikation byggd i React med syfte att bygga sängar, samma applikation som före föräldraledigheten.`,
+          },
+        ],
+      },
     ],
     education: [
       {
@@ -351,7 +364,7 @@ export default {
         entity: "Lars Kagg",
         entityTitle: "Tekniska programmet",
         projects: [],
-        description: null
+        description: null,
       },
       {
         start: "201009",
@@ -369,10 +382,10 @@ export default {
             location: "Cybercom",
             projectRole: "Master Thesis",
             description:
-              "Jag och en student till gjorde vår master thesis på Cybercom i Malmö, vi fick tillgång till deras lokaler där vi kunde utveckla och testa vårt positioneringssystem"
-          }
-        ]
-      }
-    ]
-  }
+              "Jag och en student till gjorde vår master thesis på Cybercom i Malmö, vi fick tillgång till deras lokaler där vi kunde utveckla och testa vårt positioneringssystem",
+          },
+        ],
+      },
+    ],
+  },
 };

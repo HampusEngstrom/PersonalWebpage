@@ -18,6 +18,8 @@ const Line = styled.div`
   height: 1px;
 `;
 
+const getCurrentYear = () => new Date().getFullYear();
+
 export default () => (
   <ContentConsumer>
     {({ profile }) => (
@@ -26,7 +28,7 @@ export default () => (
           <Line />
           <FlexRows>
             <Container>
-              <div>© Hampus Engström 2019</div>
+              <div>© Hampus Engström {getCurrentYear()}</div>
             </Container>
           </FlexRows>
         </FlexColumns>

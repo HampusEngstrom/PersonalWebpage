@@ -6,4 +6,5 @@ export default styled.div`
   flex-shrink: 1;
   justify-content: center;
   align-items: center;
+  white-space: pre-line;
 `;

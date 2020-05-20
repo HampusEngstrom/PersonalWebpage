@@ -58,10 +58,14 @@ const ContentContainer = styled.div`
   }
 `;
 
+const Description = styled.p`
+  white-space: pre-line;
+`;
+
 const WhatIAimToKnow = ({ title, description }) => (
   <ContentContainer>
     <h1>{title}</h1>
-    <p>{description}</p>
+    <Description>{description}</Description>
   </ContentContainer>
 );
 
